@@ -17,7 +17,7 @@ function App() {
     if (numberAllowed) str += "0123456789";
     if (charAllowed) str += "!@#$%^&*`=()_+{}~";
 
-    // Corrected Math.random() logic
+    
     for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length);  
       pass += str.charAt(char);
@@ -62,9 +62,9 @@ function App() {
               type="range"
               min={6}
               max={100}
-              value={length}  // Changed from 'lenght' to 'length' here
+              value={length}  
               className='cursor-pointer'
-              onChange={(e) => { setLength(e.target.value) }}  // Corrected to update the 'length' state
+              onChange={(e) => { setLength(e.target.value) }}  
             />
             <label>Length: {length}</label>
           </div>
@@ -72,7 +72,7 @@ function App() {
           <div className='flex items-center gap-x-1'>
             <input
               type="checkbox"
-              checked={numberAllowed}  // Changed 'defaultChecked' to 'checked' to properly manage state
+              checked={numberAllowed}  
               id='numberInput'
               onChange={() => {
                 setNumberAllowed((prev) => !prev);
@@ -84,7 +84,7 @@ function App() {
           <div className='flex items-center gap-x-1'>
             <input
               type="checkbox"
-              checked={charAllowed}  // Changed 'defaultChecked' to 'checked' to properly manage state
+              checked={charAllowed} 
               id='charInput'
               onChange={() => {
                 setCharAllowed((prev) => !prev);
