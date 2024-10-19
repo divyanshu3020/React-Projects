@@ -49,7 +49,7 @@ function App() {
             readOnly
             ref={passwordRef}
           />
-          {/* Added hover and active styles to the copy button */}
+         
           <button
            onClick={copyPasswordToClipboard}
            className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 transition duration-300 hover:bg-blue-600 active:bg-blue-800'>
